@@ -1,0 +1,32 @@
+{
+  "name": "shaka-player-themes",
+  "version": "1.0.0",
+  "description": "Themes for Shaka player",
+  "main": "themes.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucksy/shaka-player-themes.git"
+  },
+  "keywords": [
+    "shaka-payer",
+    "shaka-themes",
+    "shaka-player-themes"
+  ],
+  "author": "Amila Sampath",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/lucksy/shaka-player-themes/issues"
+  },
+  "homepage": "https://github.com/lucksy/shaka-player-themes#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-less": "^4.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "less-plugin-autoprefix": "^2.0.0",
+    "path": "^0.12.7"
+  }
+}
