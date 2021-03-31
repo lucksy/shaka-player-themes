@@ -1,8 +1,6 @@
+node_modules/
 .DS_Store
-.DS_Store?
-._*
+.ruby-version
 package-lock.json
 shaka-player-themes.sublime-project
 shaka-player-themes.sublime-workspace
-node_modules
-node_modules/*

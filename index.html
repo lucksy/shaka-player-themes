@@ -1,28 +1,60 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Shaka Player ui compiled library: -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.10/shaka-player.ui.min.js" integrity="sha512-QFvv7o/fr201Dyw7VHNBDCn4UCQRuPLLWSLeAk6BGfgK3DTSv0SCFf/4eo9JYVIlAEMFfZDwbtHNUPi1XgpUPg==" crossorigin="anonymous"></script>
-    <!-- <script src="http://localhost/projects/shaka-player/dist/shaka-player.ui.js"></script> -->
-    <!-- Shaka Player ui compiled library default CSS: -->
+    <title>Shaka Player Themes</title>
+    <meta property="og:image" content="https://opensource.google/assets/static/images/misc/og1.jpg">
+    <meta property="og:title" content="Shaka Player Themes">
+    <meta property="og:site_name" content="lucksy.github.io/shaka-player-themes/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lucksy.github.io/shaka-player-themes/">
+    <meta name="description" content="Colorful themes for Shaka video player including YouTube like player and twitter, Facebook, Vimeo like video player themes for Shaka video player">
+    <meta property="og:description" content="Colorful themes for Shaka video player including YouTube like player and twitter, Facebook, Vimeo like video player themes for Shaka video player">
+    <link rel="shortcut icon" href="./images/shaka_palyer_logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Roboto:400,500|Roboto+Mono:400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.10/controls.min.css" />
-    <!-- Chromecast SDK (if you want Chromecast support for your app): -->
+    <link rel="stylesheet" href="/dist/demo.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.10/shaka-player.ui.min.js" integrity="sha512-QFvv7o/fr201Dyw7VHNBDCn4UCQRuPLLWSLeAk6BGfgK3DTSv0SCFf/4eo9JYVIlAEMFfZDwbtHNUPi1XgpUPg==" crossorigin="anonymous"></script>
     <script defer src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
-    <!-- Your application source: -->
     <script src="./js/script.js"></script>
+
+
   </head>
   <body>
-    <div class="wrap">
-      <h1>Shake player demo</h1>
-    <!-- The data-shaka-player-container tag will make the UI library place the controls in this div.
-         The data-shaka-player-cast-receiver-id tag allows you to provide a Cast Application ID that
-           the cast button will cast to; the value provided here is the sample cast receiver. -->
-    <div data-shaka-player-container style="max-width:40em"
+    <section id="wrap">
+    <header>
+      <h1><img src="./images/shaka_palyer_logo.png" alt="Colorful themes for Shaka video" /></h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Colors</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="content">
+      <article>
+        <section>
+          <div data-shaka-player-container style="max-width:40em"
          data-shaka-player-cast-receiver-id="930DEB06">
-       <!-- The data-shaka-player tag will make the UI library use this video element.
-            If no video is provided, the UI will automatically make one inside the container div. -->
       <video autoplay data-shaka-player id="video" style="width:100%;height:100%"></video>
     </div>
-  </div>
+        </section>
+      </article>
+      <aside id="left">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                
+                <li><a href="#">YouTube</a></li>
+            </ul>
+        </nav>
+      </aside>
+      <aside id="right"></aside>
+    <section>
+    <footer></footer>
+  </section>
+
   </body>
 </html>

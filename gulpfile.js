@@ -35,7 +35,7 @@ function reload(done) {
 function serve(done) {
   server.init({
     server: {
-      baseDir: './demo'
+      baseDir: './'
     }
   });
   done();
