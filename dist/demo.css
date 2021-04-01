@@ -1,17 +1,26 @@
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notosans/v12/o-0OIpQlx3QUlC5A4PNr4DRF.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notosans/v12/o-0IIpQlx3QUlC5A4PNb4g.ttf) format('truetype');
+}
 body {
-  background: red;
-}
-.content {
-  margin: 0 auto;
-  width: 500px;
-}
-.shaka-bottom-controls {
-  width: 100%;
+  background: #e8eaed;
   padding: 0;
-  padding-bottom: 0;
-  z-index: 1;
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  color: #202124;
 }
-.shaka-bottom-controls {
+#wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,16 +28,211 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
 }
+/* Header */
+header {
+  padding: 0 16px;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+  z-index: 100;
+  text-transform: capitalize;
+  contain: layout;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1103;
+}
+header h1 {
+  margin: 0 0 0 24px;
+  line-height: 1;
+  font-size: 20px;
+  font-weight: 400;
+  color: #5f6368;
+}
+header img {
+  height: 32px;
+  float: left;
+}
+header nav {
+  margin-left: auto;
+  margin-right: 24px;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header nav ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav ul li a {
+  margin: 0 0 0 12px;
+  padding: 0 6px;
+  border-bottom: 3px solid #FFF;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 61px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #5f6368;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  outline: none;
+}
+header nav ul li a .active,
+header nav ul li a:hover {
+  color: #202124;
+  border-bottom: 3px solid #4285f4;
+}
+header nav ul li a:active,
+header nav ul li a:focus {
+  color: #202124;
+}
+/* /Header */
+/* Banner */
+/* TODO: If we have to put banner 
+	<div class="banner">
+      <p>Tested with shaka-player 3.0.10 version</p>
+    </div>
+*/
+.banner {
+  padding: 10px 16px;
+  text-align: center;
+  word-break: break-word;
+  background-color: #fde293;
+}
+.banner p {
+  margin: 0;
+  color: #202124;
+  display: inline;
+  line-height: 24px;
+}
+/* /Banner */
+/* Left */
+#left {
+  width: 268px;
+  position: fixed;
+  bottom: 0;
+  top: 64px;
+  z-index: 1;
+  min-height: 120%;
+  background: #FFF;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+/* /Left */
+/* Content */
+#content {
+  margin-top: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#content main {
+  display: grid;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-height: auto;
+  grid-gap: 24px;
+  grid-template-rows: 1fr;
+  grid-template-columns: minmax(268px, 1fr) minmax(752px, 936px) minmax(160px, 1fr);
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  z-index: 1003;
+}
+#content main #right {
+  grid-row: 1;
+  grid-column: 3;
+  margin: 24px 24px 0 0;
+  min-width: 0;
+  width: auto;
+}
+#content main article {
+  padding: 40px;
+  grid-row: 1;
+  grid-column: 2;
+  -ms-flex-item-align: start;
+      align-self: start;
+  margin: 24px 0;
+  max-width: 936px;
+  min-width: 0;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  background: #FFF;
+}
+#content main article .announcement {
+  margin: -40px -40px 40px;
+  background-color: #e1f5fe;
+}
+#content main article .announcement .message {
+  padding: 20px 40px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* /Content */
+/*
+.shaka-bottom-controls {
+	width: 100%;
+    padding: 0;
+    padding-bottom: 0;
+    z-index: 1;
+}
+
+.shaka-bottom-controls {
+	display: flex; flex-direction: column;
+}
+
 .shaka-ad-controls {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+	order: 1;
 }
-.shaka-controls-button-panel {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+
+
+.shaka-controls-button-panel { 
+	order: 2;
 }
 /*
 .shaka-controls-button-panel {
