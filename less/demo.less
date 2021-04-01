@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 body {  background: #e8eaed; padding: 0; margin: 0;  font-family: 'Noto Sans', sans-serif; font-size: 14px; color: #202124; }
 #wrap {
 	display: flex;
@@ -11,7 +11,7 @@ body {  background: #e8eaed; padding: 0; margin: 0;  font-family: 'Noto Sans', s
 /* Header */
 header {
 	padding: 0 16px; height: 64px; display: flex; align-items: center; background-color: #FFF; box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3),0 2px 6px 2px rgba(60,64,67,0.15); z-index: 100; text-transform: capitalize; contain: layout; position: fixed; top: 0; width: 100%; z-index: 1103;
-	h1 { margin: 0 0 0 24px; line-height: 1; font-size: 20px; font-weight: 400; color: #5f6368; }
+	.title { margin: 0 0 0 24px; line-height: 1; font-size: 22px; font-weight: 400; color: #5f6368; }
 	img { height: 32px; float: left; }
 
 	nav { margin-left: auto; margin-right: 24px;
@@ -45,14 +45,33 @@ header {
 
 
 /* Left */
-#left { width: 268px; position: fixed; bottom: 0; top: 64px; z-index: 1; min-height: 120%; background: #FFF; box-shadow: 0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15); }
+#left { width: 268px; position: fixed; bottom: 0; top: 64px; z-index: 1; min-height: 120%; background: #FFF; box-shadow: 0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15); z-index: 1100;
+	ul { margin: 0; padding: 0; list-style: none;
+		li {
+			margin: 0; padding: 0;
+			a,span { padding: 4px 8px 4px 24px; margin-right: 8px; border-radius: 0 12px 12px 0; display: flex; }
+			&.nav-text { color: rgba(0,0,0,.65); font-weight: 700; font-size: 13px;
+				&.heading { border-top: 1px solid #dadce0; padding-top: 11px; margin-top: 12px; }
+			}
+			a {
+				font-size: 13px; color: #202124; text-decoration: none; 
+				&:hover { background-color: #f1f3f4;  }
+			}
+		}
+		&.first-nav {
+			&:first-child { margin-top: 20px; }
+		}
+	}
+}
 /* /Left */
 
 /* Content */
 #content { margin-top: 64px; display: flex; flex: 1 0; flex-direction: column; 
 	main {
 		display: grid; flex-grow: 1; min-height: auto; grid-gap: 24px; grid-template-rows: 1fr; grid-template-columns: minmax(268px,1fr) minmax(752px,936px) minmax(160px,1fr); margin: 0 auto; position: relative; width: 100%; z-index: 1003;
-	
+		.page-title { margin-top: 0; position: relative; top: -4px; font-size: 32px; font-weight: 400; line-height: 40px; letter-spacing: -.01em;  }
+		h2 { font-size: 24px; }
+
 		#right { grid-row: 1; grid-column: 3;  margin: 24px 24px 0 0; min-width: 0; width: auto; }
 		article { padding: 40px; grid-row: 1; grid-column: 2; align-self: start; margin: 24px 0; max-width: 936px; min-width: 0; box-shadow: 0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15); background: #FFF; 
 			.announcement { margin: -40px -40px 40px; background-color: #e1f5fe;
@@ -63,6 +82,41 @@ header {
 }
 /* /Content */
 
+.shaka-overflow-menu {
+    background-color: rgb(35, 35, 35);
+    color: rgb(255, 255, 255);
+}
+
+.shaka-overflow-menu button:hover {
+    background-color: rgb(45, 45, 45);
+}
+
+.shaka-overflow-button-label {
+    color: rgb(245, 245, 245);
+}
+
+.shaka-current-selection-span {
+    color: rgb(202, 202, 202);
+}
+
+.material-icons-round {
+    color: rgb(230, 230, 230);
+}
+
+/* Overflow sub menu style */
+
+.shaka-settings-menu {
+    background-color: rgb(35, 35, 35);
+    color: rgb(255, 255, 255);
+}
+
+.shaka-settings-menu button {
+    color: rgb(255, 255, 255);
+}
+
+.shaka-settings-menu button:hover {
+    background-color: rgb(45, 45, 45);
+}
 
 
 /*
@@ -89,3 +143,8 @@ header {
 .shaka-controls-button-panel {
 	order: 3;
 }*/
+
+#blue { margin-bottom: 500px; }
+#green { margin-bottom: 500px; }
+#yellow { margin-bottom: 500px; }
+

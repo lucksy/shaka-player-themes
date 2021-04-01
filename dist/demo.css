@@ -12,6 +12,13 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosans/v12/o-0IIpQlx3QUlC5A4PNb4g.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notosans/v12/o-0NIpQlx3QUlC5A4PNjXhFlYw.ttf) format('truetype');
+}
 body {
   background: #e8eaed;
   padding: 0;
@@ -52,10 +59,10 @@ header {
   width: 100%;
   z-index: 1103;
 }
-header h1 {
+header .title {
   margin: 0 0 0 24px;
   line-height: 1;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
   color: #5f6368;
 }
@@ -149,6 +156,46 @@ header nav ul li a:focus {
   background: #FFF;
   -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
           box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  z-index: 1100;
+}
+#left ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#left ul li {
+  margin: 0;
+  padding: 0;
+}
+#left ul li a,
+#left ul li span {
+  padding: 4px 8px 4px 24px;
+  margin-right: 8px;
+  border-radius: 0 12px 12px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#left ul li.nav-text {
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 700;
+  font-size: 13px;
+}
+#left ul li.nav-text.heading {
+  border-top: 1px solid #dadce0;
+  padding-top: 11px;
+  margin-top: 12px;
+}
+#left ul li a {
+  font-size: 13px;
+  color: #202124;
+  text-decoration: none;
+}
+#left ul li a:hover {
+  background-color: #f1f3f4;
+}
+#left ul.first-nav:first-child {
+  margin-top: 20px;
 }
 /* /Left */
 /* Content */
@@ -178,6 +225,18 @@ header nav ul li a:focus {
   position: relative;
   width: 100%;
   z-index: 1003;
+}
+#content main .page-title {
+  margin-top: 0;
+  position: relative;
+  top: -4px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+}
+#content main h2 {
+  font-size: 24px;
 }
 #content main #right {
   grid-row: 1;
@@ -214,6 +273,33 @@ header nav ul li a:focus {
           align-items: center;
 }
 /* /Content */
+.shaka-overflow-menu {
+  background-color: #232323;
+  color: #ffffff;
+}
+.shaka-overflow-menu button:hover {
+  background-color: #2d2d2d;
+}
+.shaka-overflow-button-label {
+  color: #f5f5f5;
+}
+.shaka-current-selection-span {
+  color: #cacaca;
+}
+.material-icons-round {
+  color: #e6e6e6;
+}
+/* Overflow sub menu style */
+.shaka-settings-menu {
+  background-color: #232323;
+  color: #ffffff;
+}
+.shaka-settings-menu button {
+  color: #ffffff;
+}
+.shaka-settings-menu button:hover {
+  background-color: #2d2d2d;
+}
 /*
 .shaka-bottom-controls {
 	width: 100%;
@@ -238,3 +324,12 @@ header nav ul li a:focus {
 .shaka-controls-button-panel {
 	order: 3;
 }*/
+#blue {
+  margin-bottom: 500px;
+}
+#green {
+  margin-bottom: 500px;
+}
+#yellow {
+  margin-bottom: 500px;
+}

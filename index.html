@@ -26,7 +26,7 @@
     <section id="wrap">
     <header>
       <span><img src="./images/shaka_palyer_logo.png" alt="Colorful themes for Shaka video" /></span>
-      <h1>Shaka Player themes</h1>
+      <div class="title">Shaka Player themes</div>
       <nav>
         <ul>
           <li><a href="https://github.com/lucksy/shaka-player-themes">Contribute to themes</a></li>
@@ -37,38 +37,131 @@
       
     <aside id="left">
       <nav>
-          <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">YouTube</a></li>
-          </ul>
+        <ul class="nav first-nav">
+          <li class="nav-text"><span>Color Themes</span></li>
+          <li><a href="#blue">Blue</a></li>
+          <li><a href="#green">Green</a></li>
+          <li><a href="#red">Red</a></li>
+          <li><a href="#yellow">Yellow</a></li>
+          <li><a href="#black">Black</a></li>
+        </ul>
+
+        <ul class="nav">
+          <li class="nav-text heading"><span>Brand Themes</span></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Vimeo</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+
+        <ul class="nav">
+          <li class="nav-text heading"><span>New Themes</span></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Vimeo</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+
+        <ul class="nav">
+          <li class="nav-text"><span>Color Themes</span></li>
+          <li><a href="#">Blue</a></li>
+          <li><a href="#">Green</a></li>
+          <li><a href="#">Red</a></li>
+          <li><a href="#">Yellow</a></li>
+          <li><a href="#">Black</a></li>
+        </ul>
+
+        <ul class="nav">
+          <li class="nav-text heading"><span>Brand Themes</span></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Vimeo</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+
+        <ul class="nav">
+          <li class="nav-text heading"><span>New Themes</span></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Vimeo</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+
       </nav>
     </aside>
 
     <section id="content">
       <main>
-        <aside id="right">Table of contents</aside>
+        <aside id="right"></aside> 
         <article>
-          <div class="announcement">
+          <!-- <div class="announcement">
             <div class="message">
               <div class="message-text">
                 Themes are tested with 10.0.3 version of Shake player
               </div>
             </div>
-          </div>
-
+          </div> -->
+          <h1 class="page-title">Shake player </h1>
           <section>
             <div data-shaka-player-container style="max-width:40em"
                  data-shaka-player-cast-receiver-id="930DEB06">
               <video autoplay data-shaka-player id="video" style="width:100%;height:100%"></video>
             </div>
+
+<h2 id="blue">Blue</h2>
+<h2 id="green">Green</h2>
+<h2 id="yellow">Yellow</h2>
+
+
+
+
+
           </section>
         </article>
       </main>
     </section>
 
     <section>
-    <footer></footer>
-  </section>
+      <footer></footer>
+    </section>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+// Select all links with hashes
+$('#left a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+    </script>
   </body>
 </html>
