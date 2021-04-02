@@ -151,24 +151,26 @@ header nav ul li a:focus {
   position: fixed;
   bottom: 0;
   top: 64px;
-  z-index: 1;
-  min-height: 120%;
   background: #FFF;
   -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
           box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
   z-index: 1100;
+  max-height: 509px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  will-change: top, max-height, transform;
 }
-#left ul {
+#left #left-nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-#left ul li {
+#left #left-nav ul li {
   margin: 0;
   padding: 0;
 }
-#left ul li a,
-#left ul li span {
+#left #left-nav ul li a,
+#left #left-nav ul li span {
   padding: 4px 8px 4px 24px;
   margin-right: 8px;
   border-radius: 0 12px 12px 0;
@@ -176,25 +178,25 @@ header nav ul li a:focus {
   display: -ms-flexbox;
   display: flex;
 }
-#left ul li.nav-text {
+#left #left-nav ul li.nav-text {
   color: rgba(0, 0, 0, 0.65);
   font-weight: 700;
   font-size: 13px;
 }
-#left ul li.nav-text.heading {
+#left #left-nav ul li.nav-text.heading {
   border-top: 1px solid #dadce0;
   padding-top: 11px;
   margin-top: 12px;
 }
-#left ul li a {
+#left #left-nav ul li a {
   font-size: 13px;
   color: #202124;
   text-decoration: none;
 }
-#left ul li a:hover {
+#left #left-nav ul li a:hover {
   background-color: #f1f3f4;
 }
-#left ul.first-nav:first-child {
+#left #left-nav ul.first-nav:first-child {
   margin-top: 20px;
 }
 /* /Left */
@@ -257,6 +259,7 @@ header nav ul li a:focus {
   -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
           box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
   background: #FFF;
+  border-radius: 2px;
 }
 #content main article .announcement {
   margin: -40px -40px 40px;
@@ -272,7 +275,25 @@ header nav ul li a:focus {
       -ms-flex-align: center;
           align-items: center;
 }
+#content main article .video_wrap {
+  width: 400px;
+}
 /* /Content */
+/* Left scrollbar */
+#left-nav::-webkit-scrollbar,
+#left::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+#left-nav::-webkit-scrollbar-thumb,
+#left::-webkit-scrollbar-thumb {
+  background: rgba(128, 134, 139, 0.26);
+  border-radius: 8px;
+}
+#left-nav[scrollbars]::-webkit-scrollbar-corner {
+  background: 0;
+}
+/* / Left scrollbar */
 .shaka-overflow-menu {
   background-color: #232323;
   color: #ffffff;
@@ -324,12 +345,3 @@ header nav ul li a:focus {
 .shaka-controls-button-panel {
 	order: 3;
 }*/
-#blue {
-  margin-bottom: 500px;
-}
-#green {
-  margin-bottom: 500px;
-}
-#yellow {
-  margin-bottom: 500px;
-}

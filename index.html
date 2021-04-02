@@ -18,7 +18,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.10/shaka-player.ui.min.js" integrity="sha512-QFvv7o/fr201Dyw7VHNBDCn4UCQRuPLLWSLeAk6BGfgK3DTSv0SCFf/4eo9JYVIlAEMFfZDwbtHNUPi1XgpUPg==" crossorigin="anonymous"></script>
     <script defer src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
-    <script src="./js/script.js"></script>
 
 
   </head>
@@ -36,14 +35,21 @@
     </header>
       
     <aside id="left">
-      <nav>
+      <nav id="left-nav">
+        
         <ul class="nav first-nav">
-          <li class="nav-text"><span>Color Themes</span></li>
+          <li class="nav-text"><span>Quickstarts</span></li>
+          <li><a href="#blue">Using basic color themes</a></li>
+          <li><a href="#green">Using brand themes</a></li>
+          <li><a href="#green">Using custom themes</a></li>
+        </ul>
+
+        <ul class="nav">
+          <li class="nav-text heading"><span>Besic color themes</span></li>
           <li><a href="#blue">Blue</a></li>
           <li><a href="#green">Green</a></li>
           <li><a href="#red">Red</a></li>
           <li><a href="#yellow">Yellow</a></li>
-          <li><a href="#black">Black</a></li>
         </ul>
 
         <ul class="nav">
@@ -54,31 +60,8 @@
         </ul>
 
         <ul class="nav">
-          <li class="nav-text heading"><span>New Themes</span></li>
-          <li><a href="#">YouTube</a></li>
-          <li><a href="#">Vimeo</a></li>
-          <li><a href="#">Facebook</a></li>
-        </ul>
-
-        <ul class="nav">
-          <li class="nav-text"><span>Color Themes</span></li>
-          <li><a href="#">Blue</a></li>
-          <li><a href="#">Green</a></li>
-          <li><a href="#">Red</a></li>
-          <li><a href="#">Yellow</a></li>
-          <li><a href="#">Black</a></li>
-        </ul>
-
-        <ul class="nav">
-          <li class="nav-text heading"><span>Brand Themes</span></li>
-          <li><a href="#">YouTube</a></li>
-          <li><a href="#">Vimeo</a></li>
-          <li><a href="#">Facebook</a></li>
-        </ul>
-
-        <ul class="nav">
-          <li class="nav-text heading"><span>New Themes</span></li>
-          <li><a href="#">YouTube</a></li>
+          <li class="nav-text heading"><span>Custom Themes</span></li>
+          <li><a href="#">New Origin</a></li>
           <li><a href="#">Vimeo</a></li>
           <li><a href="#">Facebook</a></li>
         </ul>
@@ -97,21 +80,28 @@
               </div>
             </div>
           </div> -->
-          <h1 class="page-title">Shake player </h1>
+          <h1 class="page-title">Shake player</h1>
           <section>
-            <div data-shaka-player-container style="max-width:40em"
-                 data-shaka-player-cast-receiver-id="930DEB06">
-              <video autoplay data-shaka-player id="video" style="width:100%;height:100%"></video>
+            <h2 id="blue">Blue</h2>
+            <div data-shaka-player-container data-shaka-player-cast-receiver-id="930DEB06" class="video_wrap">
+              <video autoplay data-shaka-player id="blue-video" style="width:100%;height:100%"></video>
             </div>
 
-<h2 id="blue">Blue</h2>
-<h2 id="green">Green</h2>
-<h2 id="yellow">Yellow</h2>
+            <h2 id="green">Green</h2>
+            <div data-shaka-player-container data-shaka-player-cast-receiver-id="930DEB061" class="video_wrap">
+              <video autoplay data-shaka-player id="green-video" style="width:100%;height:100%"></video>
+            </div>
+<!--
+            <h2 id="green">Red</h2>
+            <div data-shaka-player-container data-shaka-player-cast-receiver-id="930DEB061" class="video_wrap">
+              <video autoplay data-shaka-player class="video" style="width:100%;height:100%"></video>
+            </div>
 
-
-
-
-
+            <h2 id="yellow">Yellow</h2>
+            <div data-shaka-player-container data-shaka-player-cast-receiver-id="930DEB061" class="video_wrap">
+              <video autoplay data-shaka-player class="video" style="width:100%;height:100%"></video>
+            </div>
+          -->
           </section>
         </article>
       </main>
@@ -125,6 +115,7 @@
 
     <script type="text/javascript">
 
+$( document ).ready(function() {
 // Select all links with hashes
 $('#left a[href*="#"]')
   // Remove links that don't actually link to anything
@@ -145,7 +136,7 @@ $('#left a[href*="#"]')
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({
-          scrollTop: target.offset().top
+          scrollTop: target.offset().top - 100
         }, 1000, function() {
           // Callback after animation
           // Must change focus!
@@ -162,6 +153,18 @@ $('#left a[href*="#"]')
     }
   });
 
+  // Set max-height to #left
+  $(window).resize(function() {
+    var document_height = $( window ).height();
+    $('#left').css('max-height', document_height);
+  }).resize();
+
+
+});
+
     </script>
+
+        <script src="./js/script.js"></script>
+
   </body>
 </html>
