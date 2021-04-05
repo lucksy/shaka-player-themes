@@ -374,7 +374,6 @@ header nav ul li a:focus {
 }
 #content main article .card {
   padding-right: 0;
-  margin-right: 20px;
   -webkit-transition: -webkit-box-shadow 0.28s ease-in-out;
   transition: -webkit-box-shadow 0.28s ease-in-out;
   transition: box-shadow 0.28s ease-in-out;
