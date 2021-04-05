@@ -288,6 +288,18 @@ header nav ul li a:focus {
   color: rgb(0 0 0%);
   font-weight: 700;
 }
+#content main #right ul li a {
+  color: #202124;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 13px;
+}
+#content main #right ul li a:hover {
+  color: #1A73E8;
+}
 #content main article {
   padding: 40px;
   grid-row: 1;

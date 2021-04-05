@@ -15,4 +15,4 @@
 
 <p>Access your new theme from http://localhost:3000/dist/path-to-your-theme/</p>
 
-<p>Configure and style the new theme and send pull request.</p>
+<p>Configure and style the new theme and send pull a request.</p>
