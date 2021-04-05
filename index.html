@@ -2,23 +2,26 @@
 <html>
   <head>
     <title>Shaka Player Themes</title>
-    <meta property="og:image" content="https://opensource.google/assets/static/images/misc/og1.jpg">
-    <meta property="og:title" content="Shaka Player Themes">
-    <meta property="og:site_name" content="lucksy.github.io/shaka-player-themes/">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lucksy.github.io/shaka-player-themes/">
-    <meta name="description" content="Colorful themes for Shaka video player including YouTube like player and twitter, Facebook, Vimeo like video player themes for Shaka video player">
-    <meta property="og:description" content="Colorful themes for Shaka video player including YouTube like player and twitter, Facebook, Vimeo like video player themes for Shaka video player">
-    <link rel="shortcut icon" href="./images/shaka_palyer_logo.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Roboto:400,500|Roboto+Mono:400">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta charset="utf-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:image" content="https://opensource.google/assets/static/images/misc/og1.jpg" />
+    <meta property="og:title" content="Shaka Player Themes" />
+    <meta property="og:site_name" content="lucksy.github.io/shaka-player-themes/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lucksy.github.io/shaka-player-themes/" />
+    <meta name="description" content="Colorful themes for Shaka video player including YouTube like player and twitter, Facebook, Vimeo like video player themes for Shaka video player" />
+    <meta property="og:description" content="Colorful themes for Shaka video player including YouTube like player and twitter, Facebook, Vimeo like video player themes for Shaka video player" />
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.10/controls.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Sharp" rel="stylesheet" />
     <link rel="stylesheet" href="./dist/demo.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.10/shaka-player.ui.min.js" integrity="sha512-QFvv7o/fr201Dyw7VHNBDCn4UCQRuPLLWSLeAk6BGfgK3DTSv0SCFf/4eo9JYVIlAEMFfZDwbtHNUPi1XgpUPg==" crossorigin="anonymous"></script>
     <script defer src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
-
 
   </head>
   <body>
@@ -36,16 +39,9 @@
       
     <aside id="left">
       <nav id="left-nav">
-        
-        <ul class="nav first-nav">
-          <li class="nav-text"><span>Quickstarts</span></li>
-          <li><a href="#blue">Using basic color themes</a></li>
-          <li><a href="#green">Using brand themes</a></li>
-          <li><a href="#green">Using custom themes</a></li>
-        </ul>
 
-        <ul class="nav">
-          <li class="nav-text heading"><span>Besic color themes</span></li>
+        <ul class="nav first-nav">
+          <li class="nav-text"><span>Besic color themes</span></li>
           <li><a href="#blue">Blue</a></li>
           <li><a href="#green">Green</a></li>
           <li><a href="#red">Red</a></li>
@@ -54,16 +50,19 @@
 
         <ul class="nav">
           <li class="nav-text heading"><span>Brand Themes</span></li>
-          <li><a href="#">YouTube</a></li>
-          <li><a href="#">Vimeo</a></li>
-          <li><a href="#">Facebook</a></li>
+          <li><a href="#youtube">YouTube</a></li>
         </ul>
 
         <ul class="nav">
           <li class="nav-text heading"><span>Custom Themes</span></li>
-          <li><a href="#">New Origin</a></li>
-          <li><a href="#">Vimeo</a></li>
-          <li><a href="#">Facebook</a></li>
+          <li><a href="#amsterdam-acid">Amsterdam Acid</a></li>
+        </ul>
+
+        <ul class="nav">
+          <li class="nav-text heading"><span>FAQs</span></li>
+          <li><a href="#blue">Using basic color themes</a></li>
+          <li><a href="#green">Using brand themes</a></li>
+          <li><a href="#green">Using custom themes</a></li>
         </ul>
 
       </nav>
@@ -80,28 +79,66 @@
               </div>
             </div>
           </div> -->
-          <h1 class="page-title">Shake player</h1>
+          <h1 class="page-title">Shake player Themes</h1>
           <section>
-            <h2 id="blue">Blue</h2>
-            <div data-shaka-player-container data-shaka-player-cast-receiver-id="930DEB06" class="video_wrap">
-              <video autoplay data-shaka-player id="blue-video" style="width:100%;height:100%"></video>
+            <h2 id="blue">Blue Theme</h2>
+            <div class="video-wrap blue-theme">
+              <video autostart="false" data-shaka-player id="blue-theme" style="width:100%;height:100%"></video>
             </div>
 
-            <h2 id="green">Green</h2>
-            <div data-shaka-player-container data-shaka-player-cast-receiver-id="930DEB061" class="video_wrap">
-              <video autoplay data-shaka-player id="green-video" style="width:100%;height:100%"></video>
-            </div>
-<!--
-            <h2 id="green">Red</h2>
-            <div data-shaka-player-container data-shaka-player-cast-receiver-id="930DEB061" class="video_wrap">
-              <video autoplay data-shaka-player class="video" style="width:100%;height:100%"></video>
+            <h2 id="green">Green Theme</h2>
+            <div class="video-wrap green-theme">
+              <video autostart="false" data-shaka-player id="green-theme" style="width:100%;height:100%"></video>
             </div>
 
-            <h2 id="yellow">Yellow</h2>
-            <div data-shaka-player-container data-shaka-player-cast-receiver-id="930DEB061" class="video_wrap">
-              <video autoplay data-shaka-player class="video" style="width:100%;height:100%"></video>
+            <h2 id="red">Red Theme</h2>
+            <div class="video-wrap red-theme">
+              <video autostart="false" data-shaka-player id="red-theme" style="width:100%;height:100%"></video>
             </div>
-          -->
+
+            <h2 id="yellow">Yellow Theme</h2>
+            <div class="video-wrap yellow-theme">
+              <video autostart="false" data-shaka-player id="yellow-theme" style="width:100%;height:100%"></video>
+            </div>
+
+            <h2 id="yellow">YouTube Theme</h2>
+            <div class="video-wrap youtube-theme">
+              <video autostart="false" data-shaka-player id="youtube-theme" style="width:100%;height:100%"></video>
+            </div>
+
+            <h2 id="amsterdam-acid">Amsterdam Acid Theme</h2>
+
+              <section id="wrap">
+                      <div class="video-wrap amsterdam-acid-blue">
+                        <h3>Amsterdam Acid Blue Theme</h2>
+                        <video autoplay="false" data-shaka-player id="amsterdam-acid-blue" style="width:100%;height:100%"></video>
+                      </div>
+              </section>
+
+              <section id="wrap">
+                      <div class="video-wrap amsterdam-acid-green">
+                        <h3>Amsterdam Acid Green Theme</h2>
+                        <video autoplay="false" data-shaka-player id="amsterdam-acid-green" style="width:100%;height:100%"></video>
+                      </div>
+              </section>
+
+              <section id="wrap">
+                      <div class="video-wrap amsterdam-acid-red">
+                        <h3>Amsterdam Acid Red Theme</h2>
+                        <video autoplay="false" data-shaka-player id="amsterdam-acid-red" style="width:100%;height:100%"></video>
+                      </div>
+              </section>
+
+              <section id="wrap">
+                      <div class="video-wrap amsterdam-acid-yellow">
+                        <h3>Amsterdam Acid Yellow Theme</h2>
+                        <video autoplay="false" data-shaka-player id="amsterdam-acid-yellow" style="width:100%;height:100%"></video>
+                      </div>
+              </section>
+
+
+
+
           </section>
         </article>
       </main>
@@ -113,58 +150,29 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
 
-$( document ).ready(function() {
-// Select all links with hashes
-$('#left a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top - 100
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-  });
+    <!-- TODO Find a way to concatenate theme files to one file automatically -->
 
-  // Set max-height to #left
-  $(window).resize(function() {
-    var document_height = $( window ).height();
-    $('#left').css('max-height', document_height);
-  }).resize();
+    <link rel="stylesheet" href="./dist/colors/blue-theme/blue-theme.css" />
+    <script src="./dist/colors/blue-theme/blue-script.js"></script>
 
+    <link rel="stylesheet" href="./dist/colors/green-theme/green-theme.css" />
+    <script src="./dist/colors/green-theme/green-script.js"></script>
 
-});
+    <link rel="stylesheet" href="./dist/colors/red-theme/red-theme.css" />
+    <script src="./dist/colors/red-theme/red-script.js"></script>
 
-    </script>
+    <link rel="stylesheet" href="./dist/colors/yellow-theme/yellow-theme.css" />
+    <script src="./dist/colors/yellow-theme/yellow-script.js"></script>
 
-        <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./dist/brands/youtube-theme/youtube-theme.css" />
+    <script src="./dist/brands/youtube-theme/youtube-script.js"></script>
+
+    <link rel="stylesheet" href="./dist/custom/amsterdam-acid/amsterdam-acid-theme.css" />
+    <script src="./dist/custom/amsterdam-acid/amsterdam-acid-script.js"></script>
+    
+
+    <script src="./js/script.js"></script>
 
   </body>
 </html>

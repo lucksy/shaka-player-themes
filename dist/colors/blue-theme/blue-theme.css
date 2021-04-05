@@ -1,0 +1,60 @@
+.blue-theme .shaka-controls-button-panel .material-icons-round {
+  color: #4285F4;
+}
+.blue-theme .shaka-current-time {
+  color: #4285F4;
+}
+.blue-theme .shaka-range-element {
+  cursor: pointer;
+}
+.blue-theme input[type=range]::-webkit-slider-thumb {
+  background: #4285F4;
+  cursor: pointer;
+}
+.blue-theme input[type=range]::-moz-range-thumb {
+  background: #4285F4;
+  cursor: pointer;
+}
+.blue-theme input[type=range]::-ms-thumb {
+  background: #4285F4;
+  cursor: pointer;
+}
+.blue-theme .shaka-play-button[icon=pause],
+.blue-theme .shaka-play-button[icon=play] {
+  background-color: #4285F4;
+}
+.blue-theme .shaka-overflow-menu,
+.blue-theme .shaka-settings-menu {
+  background: #4285F4;
+}
+.blue-theme .shaka-overflow-menu span + span {
+  font-size: 80%;
+  color: #FFF;
+  padding-top: 2px;
+}
+.blue-theme .shaka-overflow-menu button:hover,
+.blue-theme .shaka-settings-menu button:hover {
+  background: #3275E4;
+  cursor: pointer;
+}
+.blue-theme .shaka-overflow-menu button:hover label,
+.blue-theme .shaka-settings-menu button:hover label {
+  cursor: pointer;
+}
+.blue-theme .shaka-overflow-menu button:focus,
+.blue-theme .shaka-settings-menu button:focus {
+  background: #3275E4;
+  border: none;
+  outline: none;
+}
+.blue-theme .shaka-overflow-menu button,
+.blue-theme .shaka-settings-menu button {
+  color: #FFF;
+}
+.blue-theme .shaka-captions-off {
+  color: #BFBFBF;
+}
+.blue-theme .shaka-controls-button-panel > * {
+  margin: 1px;
+  padding: 0 5px;
+}

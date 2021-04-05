@@ -1,21 +1,47 @@
-const manifestUri =
-    'https://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd';
-
-NodeList.prototype.forEach = Array.prototype.forEach;
-var videos = document.querySelectorAll('video').forEach(function(el) {
-    document.addEventListener('shaka-ui-loaded', async function init() {
-    const video = el;
-    const ui = video['ui'];
-    const controls = ui.getControls();
-    const player = controls.getPlayer();
-
-    // Attach player and ui to the window to make it easy to access in the JS console.
-    window.player = player;
-    window.ui = ui;
-    try {
-      await player.load(manifestUri);
-    } catch (error) {
-      console.log(error);
+$( document ).ready(function() {
+// Select all links with hashes
+$('#left a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top - 100
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
     }
-   });
+  });
+  
+
+  // Set max-height to #left
+  $(window).resize(function() {
+    var document_height = $( window ).height();
+    $('#left').css('max-height', document_height);
+  }).resize();
+
 });
+

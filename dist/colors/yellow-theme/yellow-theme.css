@@ -1,0 +1,60 @@
+.yellow-theme .shaka-controls-button-panel .material-icons-round {
+  color: #FBBC05;
+}
+.yellow-theme .shaka-current-time {
+  color: #FBBC05;
+}
+.yellow-theme .shaka-range-element {
+  cursor: pointer;
+}
+.yellow-theme input[type=range]::-webkit-slider-thumb {
+  background: #FBBC05;
+  cursor: pointer;
+}
+.yellow-theme input[type=range]::-moz-range-thumb {
+  background: #FBBC05;
+  cursor: pointer;
+}
+.yellow-theme input[type=range]::-ms-thumb {
+  background: #FBBC05;
+  cursor: pointer;
+}
+.yellow-theme .shaka-play-button[icon=pause],
+.yellow-theme .shaka-play-button[icon=play] {
+  background-color: #FBBC05;
+}
+.yellow-theme .shaka-overflow-menu,
+.yellow-theme .shaka-settings-menu {
+  background: #FBBC05;
+}
+.yellow-theme .shaka-overflow-menu span + span {
+  font-size: 80%;
+  color: #FFF;
+  padding-top: 2px;
+}
+.yellow-theme .shaka-overflow-menu button:hover,
+.yellow-theme .shaka-settings-menu button:hover {
+  background: #EBAC00;
+  cursor: pointer;
+}
+.yellow-theme .shaka-overflow-menu button:hover label,
+.yellow-theme .shaka-settings-menu button:hover label {
+  cursor: pointer;
+}
+.yellow-theme .shaka-overflow-menu button:focus,
+.yellow-theme .shaka-settings-menu button:focus {
+  background: #EBAC00;
+  border: none;
+  outline: none;
+}
+.yellow-theme .shaka-overflow-menu button,
+.yellow-theme .shaka-settings-menu button {
+  color: #FFF;
+}
+.yellow-theme .shaka-captions-off {
+  color: #BFBFBF;
+}
+.yellow-theme .shaka-controls-button-panel > * {
+  margin: 1px;
+  padding: 0 5px;
+}
