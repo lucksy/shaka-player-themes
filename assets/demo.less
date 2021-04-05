@@ -86,7 +86,7 @@ header {
 				margin: 0; padding: 0 8px 0 12px; position: fixed; border-left: 4px solid #1a73e8; list-style-type: none; list-style: disc outside; width: auto; 
 				li {
 					margin: 0; padding: 0; display: flex; line-height: 16px;
-					.headig { color: rgb(0 0 0 / 65%); font-weight: 700; }
+					&.heading { color: rgba(0, 0, 0, 65%); font-weight: 700; margin-bottom: 5px; }
 					a { color: #202124; display: flex; padding: 4px; text-decoration: none; font-size: 13px;
 						&:hover { color: #1A73E8; }
 					}
@@ -125,7 +125,7 @@ header {
 			    border: 1px solid #dadce0;
 			    background: #fff;
 			    border-radius: 8px;
-			    .btn { margin: 20px; }
+			    .btn { margin: 20px; color: #FFF; }
 			    &:hover {
 			    	box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 5%), 0 1px 3px 1px rgba(60, 64, 67, 15%);
 			    }
@@ -136,7 +136,7 @@ header {
 			}
 		}
 
-		.btn { margin-top: 20px; background-color: #1A73E8; height: 44px; letter-spacing: .25px; color: #fff; box-shadow: none; box-sizing: border-box; cursor: pointer; display: inline-flex; font-weight: 500;min-width: auto;
+		.btn { margin-top: 20px; background-color: #1A73E8; height: 44px; letter-spacing: .25px; color: #fff !important; box-shadow: none; box-sizing: border-box; cursor: pointer; display: inline-flex; font-weight: 500;min-width: auto;
     outline: none; padding: 0 24px; position: relative; text-decoration: none;  align-items: center; border: 0; border-radius: 4px; 
     	&:hover { background-color: #174EA6; }
     }

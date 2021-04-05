@@ -1,4 +1,10 @@
-# shaka-player-themes
+# Shaka player themes
+
+<p>This is collection of early stage Shaka player themes.</p>
+
+## Demo page
+<p><a href="https://lucksy.github.io/shaka-player-themes/">Check demos and download themes</a>
+
 
 ## How do I contribute?
 
