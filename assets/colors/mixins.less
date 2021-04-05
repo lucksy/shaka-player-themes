@@ -1,0 +1,71 @@
+.set_color(@color, @darker) {
+
+  // Variables
+  @primary:  @color;
+  @secondary: lighten(@color, 50%);
+  @light: lighten(@color, 10%);
+
+  // Panel buttons color
+  .shaka-controls-button-panel .material-icons-round { color: @primary; }
+
+  // Current time color
+  .shaka-current-time { color: @primary; }
+
+  // Range iput styles
+  .shaka-range-element {
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    background: @primary;
+    cursor: pointer;
+  }
+
+  input[type=range]::-moz-range-thumb {
+    background: @primary;
+    cursor: pointer;
+  }
+
+  input[type=range]::-ms-thumb {
+    background: @primary;
+    cursor: pointer;
+  }
+  // Range iput styles
+
+  // Mobile play, pause button
+  .shaka-play-button[icon=pause], .shaka-play-button[icon=play] { background-color: @primary; }
+  // Mobile play, pause button
+
+
+  // shaka-overflow-menu
+  .shaka-overflow-menu, .shaka-settings-menu {
+  	background: @primary;
+  }
+
+  // Smaller font-size for text below labels. 
+  .shaka-overflow-menu span + span { font-size: 80%; color: #FFF; padding-top: 2px; }
+
+  // Hover color
+  .shaka-overflow-menu button:hover, .shaka-settings-menu button:hover {
+      background: @darker; cursor: pointer;
+      label { cursor: pointer; }
+  }
+
+  .shaka-overflow-menu button:focus, .shaka-settings-menu button:focus {
+  	background: @darker; border: none; outline: none;
+  }
+
+  // Text color
+  .shaka-overflow-menu button, .shaka-settings-menu button {
+  	color: #FFF;
+  }
+
+  .shaka-captions-off {
+      color: #BFBFBF;
+  }
+
+  .shaka-controls-button-panel>* {
+  	margin: 1px; padding: 0 5px;
+  }
+
+
+}

@@ -1,0 +1,163 @@
+// Variables
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@primary:		#FF0000;
+
+.youtube-theme {
+	font-family: 'Roboto', sans-serif;
+	// Moving bottom control to bottom
+	.shaka-bottom-controls {
+		width: 100%;
+	    padding: 0;
+	    padding-bottom: 0;
+	    z-index: 1;
+	}
+
+	.shaka-bottom-controls {
+		display: flex; flex-direction: column;
+	}
+
+	.shaka-ad-controls {
+		order: 1;
+	}
+
+	.shaka-controls-button-panel { 
+		order: 2; height: 40px; padding: 0 10px;
+	}
+
+	.shaka-range-container {
+		margin: 4px 10px 4px 10px; top: 0;
+	}
+
+	// Moving botton control icons
+	.shaka-small-play-button { order: -3; }
+	.shaka-mute-button { order: -2; }
+	
+	// Remove margin around buttons
+	.shaka-controls-button-panel > * { margin: 0; padding: 3px 8px; color: #EEE; height: 40px;
+		&:focus { outline: none; box-shadow: inset 0 0 0 2px rgba(27, 127, 204, 80%); color: #FFF; }
+		&:hover { color: #FFF;  }
+	}
+
+	// volume styles
+	.shaka-controls-button-panel .shaka-volume-bar-container { position: relative; z-index: 10; left: -1px; order: -1; opacity: 0; width: 0px; -webkit-transition: width 0.2s cubic-bezier(0.4,0,1,1); height: 3px;
+    transition: width 0.2s cubic-bezier(0.4,0,1,1); padding: 0;
+		&:hover, &:focus { 
+			display: block; width: 50px; opacity: 1; padding: 0 6px;
+		}
+	}
+	.shaka-mute-button:hover + div { opacity: 1; width: 50px; padding: 0 6px; }
+
+	// shaka-current-time
+	.shaka-current-time { padding: 0 10px; font-size: 12px; }
+
+	// Range styles
+	.shaka-seek-bar-container {
+		height: 3px; position: relative; top: -1px; border-radius: 0; margin-bottom: 0;
+		.shaka-range-element { opacity: 0; }
+		&:hover { height: 5px; top: 0; cursor: pointer;
+			.shaka-range-element { opacity: 1; cursor: pointer; }
+		}
+		input[type=range]::-webkit-slider-thumb {
+		  background: @primary;
+		  cursor: pointer;
+		}
+
+		input[type=range]::-moz-range-thumb {
+		  background: @primary;
+		  cursor: pointer;
+		}
+
+		input[type=range]::-ms-thumb {
+		  background: @primary;
+		  cursor: pointer;
+		}
+	}
+
+	// TODO find a way to show volume range when focusing it.
+
+	// Change icons
+
+	.shaka-video-container {
+		* { font-family: 'Roboto', sans-serif; }
+		.material-icons-round {
+	    font-family: 'Material Icons Sharp';
+		}
+	}
+
+	// Overflow menu styles
+
+	// shaka-overflow-menu
+	.shaka-overflow-menu, .shaka-settings-menu { border-radius: 2px; background: rgba(28,28,28,0.9); text-shadow: 0 0 2px rgb(0 0 0 / 50%); -webkit-transition: opacity .1s cubic-bezier(0,0,0.2,1); transition: opacity .1s cubic-bezier(0,0,0.2,1); -moz-user-select: none; -ms-user-select: none; -webkit-user-select: none;  right: 10px; bottom: 50px; padding: 8px 0; min-width: 200px; 
+	}
+	.shaka-settings-menu { padding: 0 0 8px 0; 
+		button { font-size: 12px;
+			span { margin-left: 33px; font-size: 13px; } 
+			&[aria-selected="true"]{
+			  display: flex;
+			  span { order: 2; margin-left:  0;  }
+			  i { order: 1; font-size: 18px; padding-left: 5px; }
+			}
+		}
+	}
+
+	.shaka-overflow-menu button { padding: 0;
+		i { display: none; }
+		.shaka-overflow-button-label { display: flex; justify-content: space-between; flex-direction: row; align-items: center; cursor: default; outline: none; height: 40px; flex: 0 0 100%;
+			span { flex-shrink: initial; padding-left: 15px; font-size: 13px; font-weight: 500; display: flex; align-items: center; }
+		}
+	}
+
+	// Smaller font-size for text below labels. 
+	.shaka-overflow-menu span + span {  color: #FFF; font-weight: 400 !important; font-size: 12px !important;  padding-right: 8px; padding-left: 0 !important; 
+		&:after {
+			content: "navigate_next"; font-family: 'Material Icons Sharp'; font-size: 20px;
+		}
+	}
+
+	.shaka-overflow-menu .shaka-pip-button {
+		span + span { padding-right: 15px !important;
+			&:after {
+				content: "";
+			}
+		}
+	}
+
+	.shaka-back-to-overflow-button {
+		padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.2); font-size: 12px; color: #eee; height: 40px;
+		.material-icons-round {
+			font-size: 15px; padding-right: 10px;
+		}
+		span { margin-left: 3px !important; }
+	}
+
+	// Hover color
+	.shaka-overflow-menu button:hover, .shaka-settings-menu button:hover {
+	    background-color: rgba(255,255,255,0.1); cursor: pointer;
+	    label { cursor: pointer; }
+	}
+
+	.shaka-overflow-menu button:focus, .shaka-settings-menu button:focus {
+		background-color: rgba(255,255,255,0.1); border: none; outline: none;
+	}
+
+	// Text color
+	.shaka-overflow-menu button, .shaka-settings-menu button {
+		color: #EEE;
+	}
+
+	.shaka-captions-off {
+	    color: #BFBFBF;
+	} 
+
+	// shaka-overflow-menu-button button
+	.shaka-overflow-menu-button {
+		font-size: 18px; margin-right: 5px;
+	}
+
+	.shaka-fullscreen-button {
+    	&:hover { font-size: 25px; -moz-transition: font-size .1s cubic-bezier(0.0,0.0,0.2,1);
+    	-webkit-transition: font-size .1s cubic-bezier(0.0,0.0,0.2,1);
+    	transition: font-size .1s cubic-bezier(0.0,0.0,0.2,1); }
+    }
+
+}

@@ -1,0 +1,22 @@
+.blue-theme {
+  /* Range iput styles */
+  /* / Range iput styles */
+  /* Mobile play, pause button */
+  /* / Mobile play, pause button */
+}
+.blue-theme input[type=range]::-webkit-slider-thumb {
+  background: #4285F4;
+  cursor: pointer;
+}
+.blue-theme input[type=range]::-moz-range-thumb {
+  background: #4285F4;
+  cursor: pointer;
+}
+.blue-theme input[type=range]::-ms-thumb {
+  background: #4285F4;
+  cursor: pointer;
+}
+.blue-theme .shaka-play-button[icon=pause],
+.blue-theme .shaka-play-button[icon=play] {
+  background-color: #4285F4;
+}
