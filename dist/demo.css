@@ -271,7 +271,7 @@ header nav ul li a:focus {
   margin: 0;
   padding: 0 8px 0 12px;
   position: fixed;
-  border-left: 4px solid #1a73e8;
+  border-left: 4px solid #1A73E8;
   list-style-type: none;
   list-style: disc outside;
   width: auto;
@@ -286,7 +286,8 @@ header nav ul li a:focus {
 }
 #content main #right ul li.heading {
   color: rgba(0, 0, 0, 0.65);
-  font-weight: 700;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 5px;
 }
 #content main #right ul li a {
@@ -400,6 +401,19 @@ header nav ul li a:focus {
   color: #37474f;
   direction: ltr!important;
   font-family: 'Roboto Mono', monospace;
+}
+#content main article .faqs ol {
+  margin-bottom: 40px;
+}
+#content main article p.push-40b {
+  margin-bottom: 40px;
+}
+#content main article .all-colors {
+  margin: 40px;
+  text-align: center;
+}
+#content main article .all-colors a {
+  margin: 0;
 }
 #content main .btn {
   margin-top: 20px;

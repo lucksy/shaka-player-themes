@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 // Select all links with hashes
-$('#left a[href*="#"]')
+$('#left a[href*="#"], #right a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')

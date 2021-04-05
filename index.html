@@ -68,7 +68,7 @@
             <li class="heading"><span>FAQs</span></li>
             <li><a href="#how-to-test">How do I test these themes?</a></li>
             <li><a href="#how-to-use">How do I use these themes?</a></li>
-            <li><a href="#all-browsers">These themes are working on all browsers?</a></li>
+            <li><a href="#all-browsers">How about cross-browser compatibility?</a></li>
             <li><a href="#contribute">How do I contribute?</a></li>
           </ul>
         </aside> 
@@ -170,53 +170,55 @@
                 </div>
               </div>
               
-              <a href="./download/amsterdam-acid-theme.zip" class="btn">All Color Amsterdam-Acid</a>
+              <div class="all-colors">
+                <a href="./download/amsterdam-acid-theme.zip" class="btn">All Color Amsterdam-Acid</a>
+              </div>
 
             <aside class="note"><h2 id="faq">Frequently asked questions</h2></aside>
 
-            <h3 id="how-to-test">How do I test these themes?</h3>
+                <section class="faqs">
+                          <h3 id="how-to-test">How do I test these themes?</h3>
+                          <ol>
+                            <li>Download theme files</li>
+                            <li>Unzip it and move files to server or localhost environment</li>
+                            <li>Access the theme from a browser</li>
+                          </ol>
 
-            <ol>
-              <li>Download theme files</li>
-              <li>Unzip it and move files to server or localhost environment</li>
-              <li>Access the theme from a browser</li>
-            </ol>
+                          <h3 id="how-to-use">How do I use these themes?</h3>
 
-            <h3 id="how-to-use">How do I use these themes?</h3>
+                          <ol>
+                            <li>Download theme files</li>
+                            <li>Unzip it and move files to server or localhost environment</li>
+                            <li>Access the theme from a browser and test it</li>
+                            <li>Explore theme folder index.html code</li>
+                            <li>Attch theme .css file and .js file to your web page</li>
+                            <li>Wrap your video element with theme spesific css class (ex: .amsterdam-acid-yellow)</li>
+                          </ol>
 
-            <ol>
-              <li>Download theme files</li>
-              <li>Unzip it and move files to server or localhost environment</li>
-              <li>Access the theme from a browser and test it</li>
-              <li>Explore theme folder index.html code</li>
-              <li>Attch theme .css file and .js file to your web page</li>
-              <li>Wrap your video element with theme spesific css class (ex: .amsterdam-acid-yellow)</li>
-            </ol>
+                          <h3 id="all-browsers">How about cross-browser compatibility</h3>
+                          <p class="push-40b">These themes were tested on latest versions of Chrome and Safari. If you found an issue, please <a href="https://github.com/lucksy/shaka-player-themes/issues">create an issue</a> on GitHub.</p>
 
-            <h3 id="all-browsers">These themes are working on all browsers?</h3>
-            <p>These themes were tested on latest versions of Chrome and Safari. If you found an issue, please <a href="https://github.com/lucksy/shaka-player-themes/issues">create an issue</a> on GitHub.</p>
+                          <h3 id="contribute">How do I contribute?</h3>
 
-            <h3 id="contribute">How do I contribute?</h3>
-
-            <ol>
-              <li>
-                <p>Clone the <a href="https://github.com/lucksy/shaka-player-themes">repository</a> using HTTPS and do following steps</p>
-                <pre>> git clone https://github.com/lucksy/shaka-player-themes.git
+                          <ol>
+                            <li>
+                              <p>Clone the <a href="https://github.com/lucksy/shaka-player-themes">repository</a> using HTTPS and do following steps</p>
+                              <pre>> git clone https://github.com/lucksy/shaka-player-themes.git
 > cd shaka-player-themes
 > npm install
 > gulp</pre>
-              </li>
-              <li>
-                <p>Copy and paste example theme directry in ./assets/ folder to respective folder and renate the folder and theme files.</p>
-              </li>
-              <li>
-                <p>Access your new theme from http://localhost:3000/dist/path-to-your-theme/</p>
-              </li>
-              <li>
-                <p>Configure and style the new theme and send pull request.</p>
-              </li>
-            </ol>
-
+                            </li>
+                            <li>
+                              <p>Copy and paste example theme directry in ./assets/ folder to respective folder and renate the folder and theme files.</p>
+                            </li>
+                            <li>
+                              <p>Access your new theme from http://localhost:3000/dist/path-to-your-theme/</p>
+                            </li>
+                            <li>
+                              <p>Configure and style the new theme and send pull request.</p>
+                            </li>
+                          </ol>
+              </section>
           </section>
         </article>
       </main>
