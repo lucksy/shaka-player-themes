@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500&display=swap');
-body {  background: #e8eaed; padding: 0; margin: 0;  font-family: 'Noto Sans', sans-serif; font-size: 14px; color: #202124; }
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+body {  background: #E8EAEd; color: #5F6368; padding: 0; margin: 0;  font-family: 'Noto Sans', sans-serif; font-size: 14px; }
 #wrap {
 	display: flex;
 	flex-direction: column;
@@ -77,7 +78,7 @@ header {
 #content { margin-top: 64px; display: flex; flex: 1 0; flex-direction: column; 
 	main {
 		display: grid; flex-grow: 1; min-height: auto; grid-gap: 24px; grid-template-rows: 1fr; grid-template-columns: minmax(268px,1fr) minmax(752px,936px) minmax(160px,1fr); margin: 0 auto; position: relative; width: 100%; z-index: 1003;
-		.page-title { margin-top: 0; position: relative; top: -4px; font-size: 32px; font-weight: 400; line-height: 40px; letter-spacing: -.01em;  }
+		.page-title { margin-top: 0; position: relative; font-size: 32px; font-weight: 400; line-height: 40px; letter-spacing: -.01em;  }
 		h2 { font-size: 24px; }
 
 		#right { grid-row: 1; grid-column: 3;  margin: 24px 24px 0 0; min-width: 0; width: auto; 
@@ -90,22 +91,54 @@ header {
 			}
 		}
 		article { padding: 40px; grid-row: 1; grid-column: 2; align-self: start; margin: 24px 0; max-width: 936px; min-width: 0; box-shadow: 0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15); background: #FFF; border-radius: 2px;
+			:link, :visited {
+			    color: #1A73E8;
+			}
+			dd, ol, ul {
+			    margin: 0;
+			    padding-left: 40px;
+			}
+			li, li p {
+			    margin: 12px 0;
+			    padding: 0;
+			}
 			.announcement { margin: -40px -40px 40px; background-color: #e1f5fe;
 				.message { padding: 20px 40px; margin: 0 auto; display: flex; align-items: center; }
 			}
 			.video-wrap { width: 100%;
-				video { border-radius: 2px; }
+				video { }
 			}
-			.wrap_multiple {  margin-bottom: 50px; display: flex; justify-content: space-between; 
-				.first { padding-right: 20px;}
-				.last { padding-left: 20px; }
+			.wrap_multiple {  margin-bottom: 50px; display: flex; justify-content: space-between;
+				div { text-align: center; 
+					h3 { margin: 10px 20px; text-align: left; font-size: 16px; font-weight: 400; }
+				} 
+				.first { margin-right: 20px;}
+				.last { margin-left: 20px; }
+			}
+			.card {
+			    padding-right: 0;
+			    margin-right: 20px;
+			    transition: box-shadow .28s ease-in-out;
+			    border: 1px solid #dadce0;
+			    background: #fff;
+			    border-radius: 8px;
+			    .btn { margin: 20px; }
+			    &:hover {
+			    	box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 5%), 0 1px 3px 1px rgba(60, 64, 67, 15%);
+			    }
+			}
+			pre {
+				margin: 0; padding: 24px; white-space: pre; font-size: 14px; line-height: 20px; background: #f1f3f4; color: #37474f;
+    direction: ltr!important; font-family: 'Roboto Mono', monospace;
 			}
 		}
 
 		.btn { margin-top: 20px; background-color: #1A73E8; height: 44px; letter-spacing: .25px; color: #fff; box-shadow: none; box-sizing: border-box; cursor: pointer; display: inline-flex; font-weight: 500;min-width: auto;
-    outline: none; padding: 0 24px; position: relative; text-decoration: none;  align-items: center; border: 0; border-radius: 4px; }
+    outline: none; padding: 0 24px; position: relative; text-decoration: none;  align-items: center; border: 0; border-radius: 4px; 
+    	&:hover { background-color: #174EA6; }
+    }
 
-    	.note { margin: 16px -40px; padding: 16px 40px; background: #E1F5FE; color: #01579B; 
+    	.note { margin: 16px -40px 40px -40px; padding: 16px 40px; background: #E1F5FE; color: #01579B; 
     		h2 {
     			margin: 0; padding: 0; font-size: 20px; font-weight: 400; 
     		}

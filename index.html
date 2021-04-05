@@ -86,7 +86,7 @@
             <aside class="note"><h2 id="blue">Basic color theme</h2></aside>
 
             <div class="wrap_multiple">
-              <div class="first">
+              <div class="first card">
                 <h3 id="blue">Blue</h3>
                 <div class="video-wrap blue-theme">
                   <video autostart="false" data-shaka-player id="blue-theme" style="width:100%;height:100%"></video>
@@ -94,7 +94,7 @@
                 <a href="./download/blue-theme.zip" class="btn">Download Blue Theme</a>
               </div>
 
-              <div class="last">
+              <div class="last card">
                 <h3 id="green">Green</h3>
                 <div class="video-wrap green-theme">
                   <video autostart="false" data-shaka-player id="green-theme" style="width:100%;height:100%"></video>
@@ -103,7 +103,7 @@
               </div>
             </div>
             <div class="wrap_multiple">
-              <div class="first">
+              <div class="first card">
                 <h3 id="red">Red</h3>
                 <div class="video-wrap red-theme">
                   <video autostart="false" data-shaka-player id="red-theme" style="width:100%;height:100%"></video>
@@ -111,7 +111,7 @@
                 <a href="./download/red-theme.zip" class="btn">Download Red Theme</a>
               </div>
 
-              <div class="last">
+              <div class="last card">
                 <h3 id="yellow">Yellow</h3>
                 <div class="video-wrap yellow-theme">
                   <video autostart="false" data-shaka-player id="yellow-theme" style="width:100%;height:100%"></video>
@@ -123,7 +123,7 @@
             <aside class="note"><h2 id="youtube">YouTube </h2></aside>
             
             <div class="wrap_multiple">
-              <div class="full">
+              <div class="full card">
                 <h3>YouTube like theme</h3>
                 <div class="video-wrap youtube-theme">
                   <video autostart="false" data-shaka-player id="youtube-theme" style="width:100%;height:100%"></video>
@@ -135,7 +135,7 @@
             <aside class="note"><h2 id="amsterdam-acid">Amsterdam-Acid Theme</h2></aside>
 
               <div class="wrap_multiple">
-                <div class="first">
+                <div class="first card">
                         <div class="video-wrap amsterdam-acid-blue">
                           <h3>Amsterdam-Acid Blue</h3>
                           <video autostart="false" data-shaka-player id="amsterdam-acid-blue" style="width:100%;height:100%"></video>
@@ -143,7 +143,7 @@
                         <a href="./download/amsterdam-acid-blue.zip" class="btn">Download Blue Theme</a>
                 </div>
 
-                <div class="last">
+                <div class="last card">
                         <div class="video-wrap amsterdam-acid-green">
                           <h3>Amsterdam-Acid Green</h3>
                           <video autostart="false" data-shaka-player id="amsterdam-acid-green" style="width:100%;height:100%"></video>
@@ -152,7 +152,7 @@
                 </div>
               </div>
               <div class="wrap_multiple">
-                <div class="first">
+                <div class="first card">
                         <div class="video-wrap amsterdam-acid-red">
                           <h3>Amsterdam-Acid Red</h3>
                           <video autostart="false" data-shaka-player id="amsterdam-acid-red" style="width:100%;height:100%"></video>
@@ -160,7 +160,7 @@
                         <a href="./download/amsterdam-acid-red.zip" class="btn">Download Red Theme</a>
                 </div>
 
-                <div class="last">
+                <div class="last card">
                         <div class="video-wrap amsterdam-acid-yellow">
                           <h3>Amsterdam-Acid Yellow</h3>
                           <video autostart="false" data-shaka-player id="amsterdam-acid-yellow" style="width:100%;height:100%"></video>
@@ -173,7 +173,7 @@
 
             <aside class="note"><h2 id="faq">Frequently asked questions</h2></aside>
 
-            <h3 id="how-to-test">How I test these themes</h3>
+            <h3 id="how-to-test">How I test these themes?</h3>
 
             <ol>
               <li>Download theme files</li>
@@ -181,19 +181,40 @@
               <li>Access the theme from a browser</li>
             </ol>
 
-            <h3 id="how-to-use">How I use these themes</h3>
+            <h3 id="how-to-use">How I use these themes?</h3>
 
             <ol>
               <li>Download theme files</li>
               <li>Unzip it and move files to server or localhost environment</li>
               <li>Access the theme from a browser and test it</li>
-              <li>Attched theme .css file and .js file to your web page</li>
+              <li>Explore theme folder index.html code</li>
+              <li>Attch theme .css file and .js file to your web page</li>
               <li>Wrap your video element with theme spesific css class (ex: .amsterdam-acid-yellow)</li>
             </ol>
 
-            <h3 id="all-texted">These themes are working on all browsers</h3>
-            <p><strong>Not yet!</strong><br /> These themes are tested with latest versions of Chrome and Safari. If you find an issue, Great, please <a href="https://github.com/lucksy/shaka-player-themes/issues">create an issue</a> on GitHub.</p>
+            <h3 id="all-browsers">These themes are working on all browsers?</h3>
+            <p>These themes were tested on latest versions of Chrome and Safari. If you found an issue, please <a href="https://github.com/lucksy/shaka-player-themes/issues">create an issue</a> on GitHub.</p>
 
+            <h3 id="all-texted">How do I contribute?</h3>
+
+            <ol>
+              <li>
+                <p>Clone the <a href="https://github.com/lucksy/shaka-player-themes">repository</a> using HTTPS and do following steps</p>
+                <pre>> git clone https://github.com/lucksy/shaka-player-themes.git
+> cd shaka-player-themes
+> npm install
+> gulp</pre>
+              </li>
+              <li>
+                <p>Copy and paste example theme directry in ./assets/ folder to respective folder and renate the folder and theme files.</p>
+              </li>
+              <li>
+                <p>Access your new theme from http://localhost:3000/dist/path-to-your-theme/</p>
+              </li>
+              <li>
+                <p>Configure and style the new theme and send pull request.</p>
+              </li>
+            </ol>
 
           </section>
         </article>
@@ -224,8 +245,8 @@
     <link rel="stylesheet" href="./dist/brands/youtube-theme/youtube-theme.css" />
     <script src="./dist/brands/youtube-theme/youtube-script.js"></script>
 
-    <link rel="stylesheet" href="./dist/custom/amsterdam-acid/amsterdam-acid-theme.css" />
-    <script src="./dist/custom/amsterdam-acid/amsterdam-acid-script.js"></script>
+    <link rel="stylesheet" href="./dist/custom/amsterdam-acid/amsterdam-acid-all/amsterdam-acid-theme.css" />
+    <script src="./dist/custom/amsterdam-acid/amsterdam-acid-all/amsterdam-acid-script.js"></script>
     
 
     <script src="./js/script.js"></script>
