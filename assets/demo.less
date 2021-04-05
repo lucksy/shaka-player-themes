@@ -80,15 +80,40 @@ header {
 		.page-title { margin-top: 0; position: relative; top: -4px; font-size: 32px; font-weight: 400; line-height: 40px; letter-spacing: -.01em;  }
 		h2 { font-size: 24px; }
 
-		#right { grid-row: 1; grid-column: 3;  margin: 24px 24px 0 0; min-width: 0; width: auto; }
+		#right { grid-row: 1; grid-column: 3;  margin: 24px 24px 0 0; min-width: 0; width: auto; 
+			ul {
+				margin: 0; padding: 0 8px 0 12px; position: fixed; border-left: 4px solid #1a73e8; list-style-type: none; list-style: disc outside; width: auto; 
+				li {
+					margin: 0; padding: 0; display: flex; line-height: 16px;
+					.headig { color: rgb(0 0 0 / 65%); font-weight: 700; }
+				}
+			}
+		}
 		article { padding: 40px; grid-row: 1; grid-column: 2; align-self: start; margin: 24px 0; max-width: 936px; min-width: 0; box-shadow: 0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15); background: #FFF; border-radius: 2px;
 			.announcement { margin: -40px -40px 40px; background-color: #e1f5fe;
 				.message { padding: 20px 40px; margin: 0 auto; display: flex; align-items: center; }
 			}
-			.video-wrap { width: 365px; margin-bottom: 50px; 
+			.video-wrap { width: 100%;
 				video { border-radius: 2px; }
 			}
+			.wrap_multiple {  margin-bottom: 50px; display: flex; justify-content: space-between; 
+				.first { padding-right: 20px;}
+				.last { padding-left: 20px; }
+			}
 		}
+
+		.btn { margin-top: 20px; background-color: #1A73E8; height: 44px; letter-spacing: .25px; color: #fff; box-shadow: none; box-sizing: border-box; cursor: pointer; display: inline-flex; font-weight: 500;min-width: auto;
+    outline: none; padding: 0 24px; position: relative; text-decoration: none;  align-items: center; border: 0; border-radius: 4px; }
+
+    	.note { margin: 16px -40px; padding: 16px 40px; background: #E1F5FE; color: #01579B; 
+    		h2 {
+    			margin: 0; padding: 0; font-size: 20px; font-weight: 400; 
+    		}
+		}
+
+		    h3 {
+    			font-size: 16px; font-weight: 700; 
+    		}
 	}
 }
 

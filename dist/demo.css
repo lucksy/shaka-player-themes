@@ -261,6 +261,27 @@ header nav ul li a:focus {
   min-width: 0;
   width: auto;
 }
+#content main #right ul {
+  margin: 0;
+  padding: 0 8px 0 12px;
+  position: fixed;
+  border-left: 4px solid #1a73e8;
+  list-style-type: none;
+  list-style: disc outside;
+  width: auto;
+}
+#content main #right ul li {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 16px;
+}
+#content main #right ul li .headig {
+  color: rgb(0 0 0%);
+  font-weight: 700;
+}
 #content main article {
   padding: 40px;
   grid-row: 1;
@@ -290,11 +311,67 @@ header nav ul li a:focus {
           align-items: center;
 }
 #content main article .video-wrap {
-  width: 365px;
-  margin-bottom: 50px;
+  width: 100%;
 }
 #content main article .video-wrap video {
   border-radius: 2px;
+}
+#content main article .wrap_multiple {
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#content main article .wrap_multiple .first {
+  padding-right: 20px;
+}
+#content main article .wrap_multiple .last {
+  padding-left: 20px;
+}
+#content main .btn {
+  margin-top: 20px;
+  background-color: #1A73E8;
+  height: 44px;
+  letter-spacing: 0.25px;
+  color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 500;
+  min-width: auto;
+  outline: none;
+  padding: 0 24px;
+  position: relative;
+  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0;
+  border-radius: 4px;
+}
+#content main .note {
+  margin: 16px -40px;
+  padding: 16px 40px;
+  background: #E1F5FE;
+  color: #01579B;
+}
+#content main .note h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+#content main h3 {
+  font-size: 16px;
+  font-weight: 700;
 }
 /* /Content */
 /* Left scrollbar */
