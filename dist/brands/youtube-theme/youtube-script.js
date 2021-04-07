@@ -20,7 +20,7 @@ async function init() {
     } catch (error) {
     }
 
-    // DOTO find a way to do this without jquery. -___- or find a way to replace them CSS. maybe usering :after  
+    // TODO find a way to do this without jquery. -___- or find a way to replace them CSS. maybe usering :after  
     $('.shaka-overflow-menu-button').html('settings');
     $('.shaka-back-to-overflow-button .material-icons-round').html('arrow_back_ios_new');
 }
